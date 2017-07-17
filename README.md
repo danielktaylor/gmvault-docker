@@ -53,6 +53,7 @@ properly:
 
 * **`/etc/ssmtp/ssmtp.conf`**  
 	A ssmtp config file to send emails reports from the Docker container.
+	This is required unless you set the `GMVAULT_SKIP_SUMMARY_EMAIL` variable.
 
 	Example for Gmail:
 	```
@@ -102,6 +103,9 @@ The container is configurable through the following environment variables:
 	Set to `yes` to trigger a sync when the container starts, in addition to the
 	normal cron schedule.
 
+* **`GMVAULT_SKIP_SUMMARY_EMAIL`** *(optional)*
+	Set this variable to anything to disable the summary email that is sent
+	after each sync.
 
 Thanks
 ------
